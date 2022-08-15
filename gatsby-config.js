@@ -3,12 +3,12 @@ module.exports = {
   siteMetadata: {
     siteTitle: 'Running Page - Chi',
     siteUrl: 'https://chi.run',
-    logo: '',
+    logo: 'https://raw.githubusercontent.com/ChiZhang9797/blog-app/main/static/favicon.ico',
     description: 'Personal site and blog',
     navLinks: [
       {
         name: 'Blog',
-        url: 'https://chi.run/running',
+        url: 'https://chis-blog.herokuapp.com/blog/',
       },
       {
         name: 'About',
