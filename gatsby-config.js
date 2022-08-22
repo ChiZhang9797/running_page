@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/running_page', // Change to `/running_page` when running on github pages
   siteMetadata: {
     siteTitle: 'Running Page - Chi',
-    siteUrl: 'https://chi.run',
+    siteUrl: 'https://chizhang9797.github.io/running_page/',
     logo: 'https://raw.githubusercontent.com/ChiZhang9797/blog-app/main/static/favicon.ico',
     description: 'Personal site and blog',
     navLinks: [
@@ -12,7 +12,7 @@ module.exports = {
       },
       {
         name: 'About',
-        url: '',
+        url: 'https://github.com/ChiZhang9797/running_page',
       },
     ],
   },
