@@ -66,7 +66,7 @@ const RunMap = ({
   return (
     <ReactMapGL
       {...viewport}
-      mapStyle="mapbox://styles/mapbox/dark-v9"
+      mapStyle="mapbox://styles/chichang/clbr6ud6x000615nska69shxn"
       onViewportChange={setViewport}
       onLoad={addControlHandler}
       mapboxApiAccessToken={MAPBOX_TOKEN}
