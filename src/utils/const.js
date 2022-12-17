@@ -16,25 +16,23 @@ const USE_DASH_LINE = true;
 const LINE_OPACITY = 0.4;
 
 // IF you outside China please make sure IS_CHINESE = false
-const IS_CHINESE = true;
+const IS_CHINESE = false;
 const USE_ANIMATION_FOR_GRID = false;
 const CHINESE_INFO_MESSAGE = (yearLength, year) => {
-  const yearStr = year === 'Total' ? '所有' : ` ${year} `;
-  return `我用 App 记录自己跑步 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
+  // const yearStr = year === 'Total' ? '所有' : ` ${year} `;
+  // return `我用 App 记录自己跑步 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
 }
-const ENGLISH_INFO_MESSAGE = (yearLength, year) =>
-  `Running Journey with ${yearLength} Years, the table shows year ${year} data`;
+const ENGLISH_INFO_MESSAGE = (yearLength, year) =>``;
 
 // not support English for now
-const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
-  '我跑过了一些地方，希望随着时间推移，地图点亮的地方越来越多';
-const CHINESE_LOCATION_INFO_MESSAGE_SECOND = '不要停下来，不要停下奔跑的脚步';
+const CHINESE_LOCATION_INFO_MESSAGE_FIRST ='';
+const CHINESE_LOCATION_INFO_MESSAGE_SECOND = '';
 
 const INFO_MESSAGE = IS_CHINESE ? CHINESE_INFO_MESSAGE : ENGLISH_INFO_MESSAGE;
 const FULL_MARATHON_RUN_TITLE = IS_CHINESE ? '全程马拉松' : 'Full Marathon';
 const HALF_MARATHON_RUN_TITLE = IS_CHINESE ? '半程马拉松' : 'Half Marathon';
 const MORNING_RUN_TITLE = IS_CHINESE ? '清晨跑步' : 'Morning Run';
-const MIDDAY_RUN_TITLE = IS_CHINESE ? '午间跑步' : 'Midday Run';
+const MIDDAY_RUN_TITLE = IS_CHINESE ? '午间跑步' : 'Lunch-time Run';
 const AFTERNOON_RUN_TITLE = IS_CHINESE ? '午后跑步' : 'Afternoon Run';
 const EVENING_RUN_TITLE = IS_CHINESE ? '傍晚跑步' : 'Evening Run';
 const NIGHT_RUN_TITLE = IS_CHINESE ? '夜晚跑步' : 'Night Run';

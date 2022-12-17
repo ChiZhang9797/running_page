@@ -43,7 +43,8 @@ const YearStat = ({ year, onClick }) => {
   });
   sumDistance = (sumDistance / 1000.0).toFixed(1);
   const avgPace = formatPace(pace / (runs.length - paceNullCount));
-  const hasHeartRate = !(heartRate === 0);
+  // const hasHeartRate = !(heartRate === 0);
+  const hasHeartRate = null;
   const avgHeartRate = (heartRate / (runs.length - heartRateNullCount)).toFixed(
     0
   );
@@ -54,7 +55,7 @@ const YearStat = ({ year, onClick }) => {
       {...eventHandlers}
     >
       <section>
-        <Stat value={year} description=" Journey" />
+        <Stat value={year} description=" " />
         <Stat value={runs.length} description=" Runs" />
         <Stat value={sumDistance} description=" KM" />
         <Stat value={avgPace} description=" Avg Pace" />
