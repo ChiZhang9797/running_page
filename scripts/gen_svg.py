@@ -174,10 +174,7 @@ def main():
     )
 
     args_parser.add_argument(
-        "--from-db",
-        dest="from_db",
-        action="store_true",
-        help="activities db file",
+        "--from-db", dest="from_db", action="store_true", help="activities db file"
     )
 
     for _, drawer in drawers.items():

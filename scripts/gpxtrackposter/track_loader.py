@@ -52,10 +52,7 @@ class TrackLoader:
         self.min_length = 100
         self.special_file_names = []
         self.year_range = YearRange()
-        self.load_func_dict = {
-            "gpx": load_gpx_file,
-            "tcx": load_tcx_file,
-        }
+        self.load_func_dict = {"gpx": load_gpx_file, "tcx": load_tcx_file}
 
     def load_tracks(self, data_dir, file_suffix):
         """Load tracks data_dir and return as a List of tracks"""

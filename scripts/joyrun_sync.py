@@ -152,9 +152,7 @@ class Joyrun:
         self.__update_loginInfo()
 
     def get_runs_records_ids(self):
-        payload = {
-            "year": 0,
-        }
+        payload = {"year": 0}
         r = self.session.post(
             f"{self.base_url}/userRunList.aspx",
             data=payload,
@@ -213,10 +211,7 @@ class Joyrun:
         return gpx.to_xml()
 
     def get_single_run_record(self, fid):
-        payload = {
-            "fid": fid,
-            "wgs": 1,
-        }
+        payload = {"fid": fid, "wgs": 1}
         r = self.session.post(
             f"{self.base_url}/Run/GetInfo.aspx",
             data=payload,

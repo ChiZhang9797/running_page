@@ -10,10 +10,7 @@ OUTPUT_DIR = os.path.join(parent, "activities")
 GPX_FOLDER = os.path.join(parent, "GPX_OUT")
 TCX_FOLDER = os.path.join(parent, "TCX_OUT")
 ENDOMONDO_FILE_DIR = os.path.join(parent, "Workouts")
-FOLDER_DICT = {
-    "gpx": GPX_FOLDER,
-    "tcx": TCX_FOLDER,
-}
+FOLDER_DICT = {"gpx": GPX_FOLDER, "tcx": TCX_FOLDER}
 SQL_FILE = os.path.join(parent, "scripts", "data.db")
 JSON_FILE = os.path.join(parent, "src", "static", "activities.json")
 

@@ -314,10 +314,7 @@ if __name__ == "__main__":
     parser.add_argument("email", nargs="?", help="email of garmin")
     parser.add_argument("password", nargs="?", help="password of garmin")
     parser.add_argument(
-        "--is-cn",
-        dest="is_cn",
-        action="store_true",
-        help="if garmin accout is cn",
+        "--is-cn", dest="is_cn", action="store_true", help="if garmin accout is cn"
     )
     parser.add_argument(
         "--only-run",

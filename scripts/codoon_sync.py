@@ -28,11 +28,7 @@ basic_auth = "MDk5Y2NlMjhjMDVmNmMzOWFkNWUwNGU1MWVkNjA3MDQ6YzM5ZDNmYmVhMWU4NWJlY2
 client_id = "099cce28c05f6c39ad5e04e51ed60704"
 
 # for multi sports
-TYPE_DICT = {
-    0: "Hike",
-    1: "Run",
-    2: "Ride",
-}
+TYPE_DICT = {0: "Hike", 1: "Run", 2: "Ride"}
 
 # only for running sports, if you want others, please change the True to False
 IS_ONLY_RUN = True
@@ -80,9 +76,7 @@ class CodoonAuth:
             session.headers.update(device_info_headers())
             query = f"client_id={client_id}&grant_type=refresh_token&refresh_token={refresh_token}&scope=user%2Csports"
             r = session.post(
-                f"{base_url}/token?" + query,
-                data=query,
-                auth=self.reload(query),
+                f"{base_url}/token?" + query, data=query, auth=self.reload(query)
             )
             if not r.ok:
                 print(r.json())
@@ -172,9 +166,7 @@ class Codoon:
             "scope": "user",
         }
         r = self.session.get(
-            f"{base_url}/token",
-            params=params,
-            auth=self.auth.reload(params),
+            f"{base_url}/token", params=params, auth=self.auth.reload(params)
         )
         login_data = r.json()
         if login_data.__contains__("status") and login_data["status"] == "Error":
@@ -262,9 +254,7 @@ class Codoon:
 
     def get_single_run_record(self, route_id):
         print(f"Get single run for codoon id {route_id}")
-        payload = {
-            "route_id": route_id,
-        }
+        payload = {"route_id": route_id}
         r = self.session.post(
             f"{base_url}/api/get_single_log",
             data=payload,
