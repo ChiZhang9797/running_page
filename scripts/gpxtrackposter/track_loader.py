@@ -106,6 +106,8 @@ class TrackLoader:
             file_name = t.file_names[0]
             if int(t.length) == 0:
                 log.info(f"{file_name}: skipping empty track")
+            elif t.type != "Run":
+                log.info(f"{file_name}: skipping non-run activity")
             elif not t.start_time_local:
                 log.info(f"{file_name}: skipping track without start time")
             elif not self.year_range.contains(t.start_time_local):

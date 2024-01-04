@@ -22,10 +22,10 @@ const CHINESE_INFO_MESSAGE = (yearLength, year) => {
   // const yearStr = year === 'Total' ? '所有' : ` ${year} `;
   // return `我用 App 记录自己跑步 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
 }
-const ENGLISH_INFO_MESSAGE = (yearLength, year) =>``;
+const ENGLISH_INFO_MESSAGE = (yearLength, year) => ``;
 
 // not support English for now
-const CHINESE_LOCATION_INFO_MESSAGE_FIRST ='';
+const CHINESE_LOCATION_INFO_MESSAGE_FIRST = '';
 const CHINESE_LOCATION_INFO_MESSAGE_SECOND = '';
 
 const INFO_MESSAGE = IS_CHINESE ? CHINESE_INFO_MESSAGE : ENGLISH_INFO_MESSAGE;
@@ -47,6 +47,14 @@ const RUN_TITLES = {
   NIGHT_RUN_TITLE,
 };
 
+const RIDE_TITLES = {
+  MORNING_RIDE_TITLE: 'Morning Ride',
+  MIDDAY_RIDE_TITLE: 'Lunch Ride',
+  AFTERNOON_RIDE_TITLE: 'Afternoon Ride',
+  EVENING_RIDE_TITLE: 'Evening Ride',
+  NIGHT_RIDE_TITLE: 'Night Ride',
+};
+
 export {
   CHINESE_LOCATION_INFO_MESSAGE_FIRST,
   CHINESE_LOCATION_INFO_MESSAGE_SECOND,
@@ -55,15 +63,18 @@ export {
   IS_CHINESE,
   INFO_MESSAGE,
   RUN_TITLES,
+  RIDE_TITLES,
   USE_ANIMATION_FOR_GRID,
   USE_DASH_LINE,
   LINE_OPACITY,
 };
 
-const nike = 'rgb(24,37,3)'; // if you want change the main color change here src/styles/variables.scss
+const run = 'rgb(160,0,30)'; // if you want change the main color change here src/styles/variables.scss
+const cycle = 'rgb(0,30,230)'; // if you want change the main color change here src/styles/variables.scss
 
 // If your map has an offset please change this line
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
-export const MAIN_COLOR = nike;
+export const MAIN_COLOR = run;
+export const SUB_COLOR = cycle;
 export const PROVINCE_FILL_COLOR = '#47b8e0';

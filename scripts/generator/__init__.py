@@ -52,13 +52,13 @@ class Generator:
                 filters = {"before": datetime.datetime.utcnow()}
 
         for run_activity in self.client.get_activities(**filters):
-            if run_activity.type == "Run":
-                created = update_or_create_activity(self.session, run_activity)
-                if created:
-                    sys.stdout.write("+")
-                else:
-                    sys.stdout.write(".")
-                sys.stdout.flush()
+            # if run_activity.type == "Run":
+            created = update_or_create_activity(self.session, run_activity)
+            if created:
+                sys.stdout.write("+")
+            else:
+                sys.stdout.write(".")
+            sys.stdout.flush()
         self.session.commit()
 
     def sync_from_data_dir(self, data_dir, file_suffix="gpx"):
@@ -105,22 +105,22 @@ class Generator:
         last_date = None
         for activity in activities:
             # Determine running streak.
-            if activity.type == "Run":
-                date = datetime.datetime.strptime(
-                    activity.start_date_local, "%Y-%m-%d %H:%M:%S"
-                ).date()
-                if last_date is None:
-                    streak = 1
-                elif date == last_date:
-                    pass
-                elif date == last_date + datetime.timedelta(days=1):
-                    streak += 1
-                else:
-                    assert date > last_date
-                    streak = 1
-                activity.streak = streak
-                last_date = date
-                activity_list.append(activity.to_dict())
+            # if activity.type == "Run":
+            date = datetime.datetime.strptime(
+                activity.start_date_local, "%Y-%m-%d %H:%M:%S"
+            ).date()
+            if last_date is None:
+                streak = 1
+            elif date == last_date:
+                pass
+            elif date == last_date + datetime.timedelta(days=1):
+                streak += 1
+            else:
+                assert date > last_date
+                streak = 1
+            activity.streak = streak
+            last_date = date
+            activity_list.append(activity.to_dict())
 
         return activity_list
 

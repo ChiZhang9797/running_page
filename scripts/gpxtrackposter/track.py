@@ -24,6 +24,7 @@ run_map = namedtuple("polyline", "summary_polyline")
 
 class Track:
     def __init__(self):
+        self.type = ""
         self.file_names = []
         self.polylines = []
         self.polyline_str = ""
@@ -73,6 +74,7 @@ class Track:
 
     def load_from_db(self, activity):
         # use strava as file name
+        self.type = activity.type
         self.file_names = [str(activity.run_id)]
         start_time = datetime.datetime.strptime(
             activity.start_date_local, "%Y-%m-%d %H:%M:%S"

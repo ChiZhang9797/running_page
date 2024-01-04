@@ -17,7 +17,7 @@ const YearStat = ({ year, onClick }) => {
   );
 
   if (years.includes(year)) {
-    runs = runs.filter((run) => run.start_date_local.slice(0, 4) === year);
+    runs = runs.filter((run) => run.start_date_local.slice(0, 4) === year && run.type === 'Run');
   }
   let sumDistance = 0;
   let streak = 0;
