@@ -42,16 +42,9 @@ const YearStat = ({ year, onClick }: { year: string, onClick: (_year: string) =>
       streak = Math.max(streak, run.streak);
     }
   });
-<<<<<<< HEAD:src/components/YearStat/index.jsx
-  sumDistance = (sumDistance / 1000.0).toFixed(1);
-  const avgPace = formatPace(pace / (runs.length - paceNullCount));
-  // const hasHeartRate = !(heartRate === 0);
-  const hasHeartRate = null;
-=======
   sumDistance = parseFloat((sumDistance / 1000.0).toFixed(1));
   const avgPace = formatPace(totalMetersAvail / totalSecondsAvail);
   const hasHeartRate = !(heartRate === 0);
->>>>>>> fb98ab9c4edd69726a9bde34ffce458c66b7378e:src/components/YearStat/index.tsx
   const avgHeartRate = (heartRate / (runs.length - heartRateNullCount)).toFixed(
     0
   );
