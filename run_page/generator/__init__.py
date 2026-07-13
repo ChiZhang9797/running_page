@@ -1,4 +1,5 @@
 import datetime
+import logging
 import math
 import os
 import sys
@@ -15,6 +16,7 @@ from synced_data_file_logger import save_synced_data_file_list
 from .db import Activity, init_db, update_or_create_activity
 
 IGNORE_BEFORE_SAVING = os.getenv("IGNORE_BEFORE_SAVING", False)
+logging.getLogger("stravalib.attributes").setLevel(logging.ERROR)
 
 
 # Bounding box spread threshold (degrees) for indoor activity detection.
